@@ -16,6 +16,7 @@ type
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
+    Button5: TButton;
     Label1: TLabel;
     Timer1: TTimer;
     procedure Button1Click(Sender: TObject);
@@ -31,7 +32,7 @@ var
   Form3: TForm3;
 
 implementation
-uses Unit1, Unit2;
+uses Unit1, Unit2, Unit4;
 
 {$R *.lfm}
 
@@ -55,6 +56,7 @@ end;
 
 procedure TForm3.Button1Click(Sender: TObject);
 begin
+Form4.Show;
 end;
 
 end.
