@@ -1,0 +1,107 @@
+object Form1: TForm1
+  Left = 893
+  Height = 310
+  Top = 121
+  Width = 350
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Авторизация'
+  ClientHeight = 310
+  ClientWidth = 350
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  LCLVersion = '2.2.0.4'
+  object Button1: TButton
+    Left = 96
+    Height = 31
+    Top = 168
+    Width = 170
+    Caption = 'Авторизоваться'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 48
+    Height = 38
+    Top = 40
+    Width = 258
+    AutoSize = False
+    TabOrder = 1
+    TextHint = 'Логин'
+  end
+  object Edit2: TEdit
+    Left = 48
+    Height = 38
+    Top = 96
+    Width = 258
+    AutoSize = False
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 2
+    TextHint = 'Пароль'
+  end
+  object Button2: TButton
+    Left = 96
+    Height = 31
+    Top = 208
+    Width = 168
+    Caption = 'Зарегистрироваться'
+    OnClick = Button2Click
+    TabOrder = 3
+  end
+  object MySQL80Connection1: TMySQL80Connection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'him4enko'
+    KeepConnection = False
+    Params.Strings = (
+      'Port=3306'
+    )
+    Transaction = SQLTransaction1
+    UserName = 'root'
+    HostName = '127.0.0.1'
+    SkipLibraryVersionCheck = False
+    Left = 8
+    Top = 264
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = MySQL80Connection1
+    Transaction = SQLTransaction1
+    Params = <>
+    Macros = <>
+    Left = 104
+    Top = 264
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = MySQL80Connection1
+    Left = 56
+    Top = 264
+  end
+  object SQLScript1: TSQLScript
+    DataBase = MySQL80Connection1
+    Transaction = SQLTransaction1
+    AutoCommit = False
+    UseDollarString = False
+    Directives.Strings = (
+      'SET TERM'
+      'COMMIT WORK'
+      'COMMIT RETAIN'
+      'COMMIT'
+      '#IFDEF'
+      '#IFNDEF'
+      '#ELSE'
+      '#ENDIF'
+      '#DEFINE'
+      '#UNDEF'
+      '#UNDEFINE'
+    )
+    Terminator = ';'
+    CommentsinSQL = True
+    UseSetTerm = True
+    UseCommit = True
+    UseDefines = True
+    Left = 152
+    Top = 264
+  end
+end
