@@ -41,6 +41,7 @@ object Form3: TForm3
     Top = 144
     Width = 160
     Caption = 'Учащиеся'
+    OnClick = Button3Click
     TabOrder = 2
   end
   object Button4: TButton

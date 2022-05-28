@@ -20,6 +20,7 @@ type
     Timer1: TTimer;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
   private
@@ -32,7 +33,7 @@ var
   Form3: TForm3;
 
 implementation
-uses Unit1, Unit2, Unit4, Unit5;
+uses Unit1, Unit2, Unit4, Unit5, Unit6;
 
 {$R *.lfm}
 
@@ -62,6 +63,11 @@ end;
 procedure TForm3.Button2Click(Sender: TObject);
 begin
   Form5.Show;
+end;
+
+procedure TForm3.Button3Click(Sender: TObject);
+begin
+  Form6.Show;
 end;
 
 end.
