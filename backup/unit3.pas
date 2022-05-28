@@ -32,7 +32,7 @@ var
   Form3: TForm3;
 
 implementation
-uses Unit1, Unit2;
+uses Unit1, Unit2, Unit4;
 
 {$R *.lfm}
 
