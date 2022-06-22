@@ -1,0 +1,62 @@
+object Form8: TForm8
+  Left = 595
+  Height = 616
+  Top = 237
+  Width = 510
+  Caption = 'Дисциплины'
+  ClientHeight = 616
+  ClientWidth = 510
+  DesignTimePPI = 120
+  OnShow = FormShow
+  LCLVersion = '2.2.2.0'
+  object Button1: TButton
+    Left = 376
+    Height = 28
+    Top = 8
+    Width = 126
+    Caption = 'Добавить'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 8
+    Height = 28
+    Top = 8
+    Width = 352
+    TabOrder = 1
+    TextHint = 'Название предмета'
+  end
+  object Button2: TButton
+    Left = 376
+    Height = 28
+    Top = 48
+    Width = 126
+    Caption = 'Удалить'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object Edit2: TEdit
+    Left = 8
+    Height = 28
+    Top = 48
+    Width = 172
+    TabOrder = 3
+    TextHint = 'Преподаватель'
+  end
+  object StringGrid1: TStringGrid
+    Left = 8
+    Height = 520
+    Top = 80
+    Width = 494
+    ColCount = 4
+    TabOrder = 4
+  end
+  object Edit3: TEdit
+    Left = 188
+    Height = 28
+    Top = 48
+    Width = 172
+    TabOrder = 5
+    TextHint = 'Курс'
+  end
+end

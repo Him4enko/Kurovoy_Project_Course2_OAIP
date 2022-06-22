@@ -5,9 +5,10 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, mysql80conn, SQLDB, SQLDBLib, Forms, Controls, Graphics,
-  Dialogs, StdCtrls, MaskEdit, RTTICtrls, SynHighlighterJScript, SynEdit,
-  SynHighlighterCpp, SynHighlighterHTML, IdHashSHA, IdGlobal, IdHash, IdHashMessageDigest;
+  Classes, SysUtils, mysql80conn, SQLDB, SQLDBLib, DB, Forms, Controls,
+  Graphics, Dialogs, StdCtrls, MaskEdit, RTTICtrls, SynHighlighterJScript,
+  SynEdit, SynHighlighterCpp, SynHighlighterHTML, IdHashSHA, IdGlobal, IdHash,
+  IdHashMessageDigest;
 
 type
 
@@ -16,6 +17,7 @@ type
   TForm1 = class(TForm)
     Button1: TButton;
     Button2: TButton;
+    DataSource1: TDataSource;
     Edit1: TEdit;
     Edit2: TEdit;
     MySQL80Connection1: TMySQL80Connection;

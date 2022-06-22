@@ -41,6 +41,7 @@ object Form3: TForm3
     Top = 144
     Width = 160
     Caption = 'Учащиеся'
+    OnClick = Button3Click
     TabOrder = 2
   end
   object Button4: TButton
@@ -50,6 +51,23 @@ object Form3: TForm3
     Width = 160
     Caption = 'Выход'
     TabOrder = 3
+  end
+  object Button5: TButton
+    Left = 16
+    Height = 31
+    Top = 192
+    Width = 160
+    Caption = 'Журнал'
+    OnClick = Button5Click
+    TabOrder = 4
+  end
+  object Button6: TButton
+    Left = 16
+    Height = 31
+    Top = 240
+    Width = 158
+    Caption = 'Дисциплины'
+    TabOrder = 5
   end
   object Timer1: TTimer
     Enabled = False

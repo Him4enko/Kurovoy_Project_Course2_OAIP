@@ -1,0 +1,77 @@
+object Form7: TForm7
+  Left = 892
+  Height = 571
+  Top = 251
+  Width = 833
+  Caption = 'Журнал'
+  ClientHeight = 571
+  ClientWidth = 833
+  DesignTimePPI = 120
+  OnShow = FormShow
+  LCLVersion = '2.2.2.0'
+  object ComboBox1: TComboBox
+    Left = 16
+    Height = 28
+    Top = 16
+    Width = 127
+    ItemHeight = 20
+    OnChange = ComboBox1Change
+    Style = csDropDownList
+    TabOrder = 0
+    TextHint = 'Выберите группу'
+  end
+  object ComboBox2: TComboBox
+    Left = 156
+    Height = 28
+    Top = 16
+    Width = 127
+    ItemHeight = 20
+    Style = csDropDownList
+    TabOrder = 1
+    TextHint = 'Выберите группу'
+  end
+  object ComboBox3: TComboBox
+    Left = 297
+    Height = 28
+    Top = 16
+    Width = 127
+    ItemHeight = 20
+    OnChange = ComboBox3Change
+    Style = csDropDownList
+    TabOrder = 2
+    TextHint = 'Выберите группу'
+  end
+  object StringGrid1: TStringGrid
+    Left = 8
+    Height = 512
+    Top = 56
+    Width = 816
+    ColCount = 4
+    TabOrder = 3
+  end
+  object Edit1: TEdit
+    Left = 432
+    Height = 28
+    Top = 16
+    Width = 208
+    TabOrder = 4
+    TextHint = 'Оценка'
+  end
+  object Button1: TButton
+    Left = 648
+    Height = 28
+    Top = 16
+    Width = 90
+    Caption = 'Добавить'
+    OnClick = Button2Click
+    TabOrder = 5
+  end
+  object Button2: TButton
+    Left = 740
+    Height = 28
+    Top = 16
+    Width = 83
+    Caption = 'Удалить'
+    TabOrder = 6
+  end
+end

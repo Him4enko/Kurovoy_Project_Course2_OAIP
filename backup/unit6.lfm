@@ -1,7 +1,7 @@
 object Form6: TForm6
-  Left = 391
+  Left = 624
   Height = 689
-  Top = 188
+  Top = 223
   Width = 755
   Caption = 'Ученики'
   ClientHeight = 689

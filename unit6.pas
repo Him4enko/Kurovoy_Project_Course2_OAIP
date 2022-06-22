@@ -65,7 +65,7 @@ Form1.SQLQuery1.Clear;
 Form1.SQLQuery1.SQL.Text:='INSERT INTO students (id, name, groups, tutor, course) VALUES (:id, :name, :groups, :tutor, :course)';
 Form1.SQLQuery1.ParamByName('id').AsInteger:=StrToInt(Edit2.Text);
 Form1.SQLQuery1.ParamByName('name').AsString:=Edit1.Text;
-Form1.SQLQuery1.ParamByName('groups').AsInteger:=StrToInt(Edit3.Text);
+Form1.SQLQuery1.ParamByName('groups').AsString:=Edit3.Text;
 Form1.SQLQuery1.ParamByName('tutor').AsInteger:=StrToInt(Edit4.Text);
 Form1.SQLQuery1.ParamByName('course').AsInteger:=StrToInt(Edit5.Text);
 Form1.SQLQuery1.ExecSQL;

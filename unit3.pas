@@ -5,7 +5,8 @@ unit Unit3;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
+  DBGrids, DBCtrls;
 
 type
 
@@ -16,11 +17,15 @@ type
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
+    Button5: TButton;
+    Button6: TButton;
     Label1: TLabel;
     Timer1: TTimer;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
   private
@@ -33,7 +38,7 @@ var
   Form3: TForm3;
 
 implementation
-uses Unit1, Unit2, Unit4, Unit5, Unit6;
+uses Unit1, Unit2, Unit4, Unit5, Unit6, Unit7, Unit8;
 
 {$R *.lfm}
 
@@ -68,6 +73,16 @@ end;
 procedure TForm3.Button3Click(Sender: TObject);
 begin
   Form6.Show;
+end;
+
+procedure TForm3.Button5Click(Sender: TObject);
+begin
+  Form7.Show;
+end;
+
+procedure TForm3.Button6Click(Sender: TObject);
+begin
+  Form8.Show;
 end;
 
 end.
