@@ -67,6 +67,10 @@ begin
 ShowMessage('Вы авторизовались!');
 IdHashMD5.Free;
 status:=True;
+end
+else
+begin
+  ShowMessage('Произошла ошибка!');
 end;
 except
   begin

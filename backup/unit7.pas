@@ -21,6 +21,7 @@ type
     Edit1: TEdit;
     StringGrid1: TStringGrid;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
     procedure ComboBox1Change(Sender: TObject);
     procedure ComboBox3Change(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -107,6 +108,7 @@ var i,n:integer;
       Form1.SQLQuery1.Next;
     end;
   end;
+
 procedure updcombo_lesson();
 var i,n:integer;
   begin
@@ -136,7 +138,7 @@ procedure get();
 begin
 Form1.SQLQuery1.Close;
 Form1.SQLQuery1.Clear;
-Form1.SQLQuery1.SQL.Text:='SELECT COUNT(*) as cnt FROM students';
+Form1.SQLQuery1.SQL.Text:='SELECT COUNT(*) as cnt FROM marks';
 Form1.SQLQuery1.Open;
 Form1.SQLQuery1.First;
 with Form7.StringGrid1 do
@@ -168,9 +170,42 @@ begin
 updcombo_stud();
 end;
 
+procedure TForm7.Button2Click(Sender: TObject);
+begin
+// Удаление оценки
+Form1.SQLQuery1.Close;  // закрываем компонент
+Form1.SQLQuery1.SQL.Text:='delete from marks where id=:id'; // запрос на удаление данных
+Form1.SQLQuery1.ParamByName('id').AsString:=Edit1.Text; //указываем требуемый параметр
+Form1.SQLQuery1.ExecSQL; // выполняем запрос
+Form1.SQLTransaction1.Commit; //подтверждаем изменения в базе
+// Обновление после удаления
+Form1.SQLQuery1.Close;
+Form1.SQLQuery1.SQL.Text:='SELECT COUNT(*) as cnt FROM marks';
+Form1.SQLQuery1.Open;
+Form1.SQLQuery1.First;
+StringGrid1.RowCount:=Form1.SQLQuery1.Fields[0].AsInteger+1;
+zapoln(Form1.SQLQuery1.Fields[0].AsInteger);
+end;
+
 procedure TForm7.Button1Click(Sender: TObject);
 begin
-
+// Добавление оценки
+Form1.SQLQuery1.Close;
+Form1.SQLQuery1.Clear;
+Form1.SQLQuery1.SQL.Text:='INSERT INTO marks (student, lesson, mark) VALUES (:name, :lesson, :mark)';
+Form1.SQLQuery1.ParamByName('name').AsString:=Form7.ComboBox2.Text;
+Form1.SQLQuery1.ParamByName('lesson').AsString:=Form7.ComboBox3.Text;
+Form1.SQLQuery1.ParamByName('mark').AsInteger:=StrToInt(Form7.Edit1.Text);
+Form1.SQLQuery1.ExecSQL;
+Form1.SQLTransaction1.Commit;
+// Обновление оценок
+Form1.SQLQuery1.Close;
+Form1.SQLQuery1.Clear;
+Form1.SQLQuery1.SQL.Text:='SELECT COUNT(*) as cnt FROM marks';
+Form1.SQLQuery1.Open;
+Form1.SQLQuery1.First;
+Form7.StringGrid1.RowCount:=Form1.SQLQuery1.Fields[0].AsInteger+1;
+zapoln(Form1.SQLQuery1.Fields[0].AsInteger);
 end;
 
 procedure TForm7.ComboBox3Change(Sender: TObject);

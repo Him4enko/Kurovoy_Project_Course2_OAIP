@@ -13,7 +13,7 @@ object Form7: TForm7
     Left = 16
     Height = 28
     Top = 16
-    Width = 152
+    Width = 127
     ItemHeight = 20
     OnChange = ComboBox1Change
     Style = csDropDownList
@@ -21,20 +21,20 @@ object Form7: TForm7
     TextHint = 'Выберите группу'
   end
   object ComboBox2: TComboBox
-    Left = 184
+    Left = 156
     Height = 28
     Top = 16
-    Width = 152
+    Width = 127
     ItemHeight = 20
     Style = csDropDownList
     TabOrder = 1
     TextHint = 'Выберите группу'
   end
   object ComboBox3: TComboBox
-    Left = 352
+    Left = 297
     Height = 28
     Top = 16
-    Width = 152
+    Width = 127
     ItemHeight = 20
     OnChange = ComboBox3Change
     Style = csDropDownList
@@ -46,7 +46,36 @@ object Form7: TForm7
     Height = 512
     Top = 56
     Width = 816
-    ColCount = 4
+    ColCount = 0
+    FixedCols = 0
+    FixedRows = 0
+    RowCount = 0
     TabOrder = 3
+  end
+  object Edit1: TEdit
+    Left = 432
+    Height = 28
+    Top = 16
+    Width = 208
+    TabOrder = 4
+    TextHint = 'Оценка/ ID(удаление)'
+  end
+  object Button1: TButton
+    Left = 648
+    Height = 28
+    Top = 16
+    Width = 90
+    Caption = 'Добавить'
+    OnClick = Button1Click
+    TabOrder = 5
+  end
+  object Button2: TButton
+    Left = 740
+    Height = 28
+    Top = 16
+    Width = 83
+    Caption = 'Удалить'
+    OnClick = Button2Click
+    TabOrder = 6
   end
 end

@@ -11,8 +11,7 @@ uses
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, indylaz, runtimetypeinfocontrols, Unit1, Unit2, Unit3, Unit4, Unit5,
-  Unit6, Unit7
-  { you can add units after this };
+  Unit6, Unit7, Unit8;
 
 {$R *.res}
 
@@ -27,6 +26,7 @@ begin
   Application.CreateForm(TForm5, Form5);
   Application.CreateForm(TForm6, Form6);
   Application.CreateForm(TForm7, Form7);
+  Application.CreateForm(TForm8, Form8);
   Application.Run;
 end.
 

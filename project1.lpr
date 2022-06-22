@@ -11,13 +11,13 @@ uses
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, indylaz, runtimetypeinfocontrols, Unit1, Unit2, Unit3, Unit4, Unit5,
-  Unit6, Unit7, Unit8
-  { you can add units after this };
+  Unit6, Unit7, Unit8;
 
 {$R *.res}
 
 begin
   RequireDerivedFormResource:=True;
+  Application.Title:='Система управления колледжем';
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TForm1, Form1);
